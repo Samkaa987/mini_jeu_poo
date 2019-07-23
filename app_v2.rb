@@ -27,7 +27,7 @@ def init_playerh
 	print ">"
 	player_name = gets.chomp
 	playerh = HumanPlayer.new("#{player_name}")
-	puts "Bienvenu dans l'arène, #{player_name} ! Il est temps de rencontrer tes adversaires !"
+	puts "Bienvenue dans l'arène, #{player_name} ! Il est temps de rencontrer tes adversaires !"
 	puts "Press [ENTER]"
 	print ">"
 	gets.chomp

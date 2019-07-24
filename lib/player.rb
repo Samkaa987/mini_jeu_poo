@@ -17,21 +17,21 @@ class Player
 	end
 
 	def show_state							# montre les points de vie restants.
-		puts "#{@name} a #{@life_points} points de vie."
+		puts "L' #{@name} possède #{@life_points} combattants."
 	end
 
 	def gets_damage(player, damage)			# définit la perte de points de vie, que l'on soustrait aux points de vie totaux.
 		player.life_points = player.life_points - damage
 		if player.life_points <= 0
 			player.life_points = 0
-			puts "Le joueur #{player.name} a été tué !"
+			puts "#{player.name} a été entièrement décimée !".center(215)
 		end
 	end
 
 	def attacks(player)						# définit l'action d'attaquer d'un joueur sur un autre.
-		puts "Le joueur #{@name} attaque le joueur #{player.name}."
+		puts "#{@name} attaque #{player.name}.".center(215)
 		damage = compute_damage
-		puts "Il lui inflige #{damage} points de dégâts."
+		puts "Cela lui inflige #{damage} points de dégâts.".center(215)
 		gets_damage(player, damage)
 	end
 
